@@ -18,8 +18,20 @@ export default {
           '950': '#1a2c32',
       },
       },
-    },
+      keyframes: {
+        fadeIn: {
+          '0%' : "opacity: 0",
+          '100%' : 'opacity: 1'
+        },
+        fadeOut: {
+          '0%' : "opacity: 1",
+          '100%' : 'opacity: 0'
+        },
+      },
+      animation: {
+        'entrar': 'fadeIn 3s ease-in',
+      },
   },
   plugins: [],
 }
-
+}
