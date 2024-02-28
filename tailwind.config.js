@@ -31,6 +31,9 @@ export default {
       animation: {
         'entrar': 'fadeIn 3s ease-in',
       },
+      height: {
+        'oneCountryTlf': "25rem"
+      }
   },
   plugins: [],
 }
