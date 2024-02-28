@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const Title = () => {
+export const Title = React.memo(() => {
+  console.log("redibujando");
   return (
    <>
     <div className='w-full h-auto flex justify-center items-center text-center'>
@@ -9,3 +10,4 @@ export const Title = () => {
    </>
   )
 }
+)

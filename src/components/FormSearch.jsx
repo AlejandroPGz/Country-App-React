@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from '../hooks/useInputSearch';
 
-export const FormSearch = ({isLoading}) => {
+export const FormSearch = ({isLoading, setInputValue}) => {
 
     const initialForm = {
         country: '',
     }
 
     const {formState, country, onInputChange} = useForm(initialForm)
+    useEffect(() => {
+      setInputValue(country)    
+    }, [country])
 
     const onSubmit = (event) => {
         event.preventDefault()
+        setInputValue(country)
     }
 
   return (
