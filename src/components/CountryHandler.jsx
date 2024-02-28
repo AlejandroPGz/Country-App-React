@@ -23,7 +23,7 @@ export const CountryHandler = React.memo(({countryList, inputValue}) => {
       if (filter.length < 10) {
         return <CountriesList></CountriesList>
       } else {
-        return <Message></Message>
+        return <Message message={"We found to many countries, please be more clear..."}></Message>
       }
     }
 
