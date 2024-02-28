@@ -18,7 +18,7 @@ export const CountryHandler = React.memo(({countryList, inputValue}) => {
   const manyCountries = (filter) => {
 
     if (filter.length === 1) {
-      return <OneCountry></OneCountry>
+      return <OneCountry country={filter[0]}></OneCountry>
     } else {
       if (filter.length < 10) {
         return <CountriesList countriesList={filter}></CountriesList>

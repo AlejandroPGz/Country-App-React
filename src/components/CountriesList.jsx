@@ -1,25 +1,19 @@
 /* eslint-disable react/display-name */
 import React, { useState } from 'react'
+import { OneCountry } from './OneCountry';
 
 export const CountriesList = React.memo(({countriesList}) => {
     console.log("dibujando lista de paises");
     const [oneCountry, setOneCountry] = useState()
-    console.log(oneCountry);
-    if (oneCountry) {
-      const country = countriesList.filter(country => country.name.common === oneCountry)
-      console.log(country);
-    }
+    const country = countriesList.filter(country => country.name.common === oneCountry)
+
   return (
     <>
     {oneCountry 
     
     ? 
     
-    <div
-    className='w-4/5 h-oneCountryTlf bg-blue-chill-900 rounded-xl'
-    >
-      
-    </div>
+    <OneCountry country={country[0]}></OneCountry>
     
     : 
     
@@ -28,7 +22,6 @@ export const CountriesList = React.memo(({countriesList}) => {
     >
     {
       countriesList.map(country => {
-        console.log(country);
         return (
           <div onClick={() => setOneCountry(country.name.common)} 
           key={country.name.official}
