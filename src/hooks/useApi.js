@@ -14,7 +14,6 @@ export const useApi = (url) => {
         try {
             const response = await fetch(url)
             const data = await response.json()
-            console.log(data);
             setState({
                 data: data,
                 isLoading: false,

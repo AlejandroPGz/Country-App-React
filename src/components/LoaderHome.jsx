@@ -40,7 +40,6 @@ export const LoaderHome = React.memo(({isLoading}) => {
     ?
     <ToastContainer>
     {notifySearch()}
-    {console.log(toastId.current)}
     </ToastContainer>
     :
     <ToastContainer>
